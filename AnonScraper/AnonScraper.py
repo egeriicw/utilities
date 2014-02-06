@@ -107,6 +107,11 @@ class AnonScrapper(object):
     def throttle_scrape(self):
 
         """
+        Throttles scraping activity or api access to the provided interval.  Interval is set by
+        the number of accesses permitted per minute.  If access limits are not stated in accesses per minute,
+        they should be recalculated as such.
+        
+
         TODO:  Add a class property and functions that determine whether scraper has slept
 
         """
@@ -164,4 +169,4 @@ class AnonScrapper(object):
 
 
 if __name__ == "__main__":
-    print AnonScrapper(safe=False, throttle=10).scrape("http://www.alexandriava.gov")
+    print AnonScrapper(safe=False, throttle=10).scrape("http://www.google.com")
