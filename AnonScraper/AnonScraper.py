@@ -8,9 +8,18 @@ from bs4 import BeautifulSoup
 class AnonScrapper(object):
 
     """
-        Main scrapper object.
+        AnonScraper
+
+        Use:    <variable> = AnonScraper(safe=False, throttle=False)
+
+                <variable>.scrape(<url>)
+
+        Returns:
+                
+
         Use self.do_anonymous_scrapping after setting self.url
-        (or use scrap() function)
+        (or use scrape() function)
+        
         If safe is set to false and proxies.txt is not present it will
         do the request unproxied.
 
@@ -41,6 +50,8 @@ class AnonScrapper(object):
         """
         Setup scraping engine
         """
+
+        print "**-Setting up browser environment-**"
 
         # Browser Initiation
         self.browser = mechanize.Browser()
