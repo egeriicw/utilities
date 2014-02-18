@@ -5,7 +5,7 @@ import time
 import random
 from bs4 import BeautifulSoup
 
-class AnonScrapper(object):
+class AnonScraper(object):
 
     """
         AnonScraper
@@ -144,11 +144,11 @@ class AnonScrapper(object):
         if self.throttle:
             self.throttle_scrape()
 
-        self.do_anon_scrapping()
+        self.do_anon_scraping()
         
         return self.data
 
-    def do_anon_scrapping(self):
+    def do_anon_scraping(self):
 
         """
         Scrapping engine
@@ -180,4 +180,8 @@ class AnonScrapper(object):
 
 
 if __name__ == "__main__":
-    print AnonScrapper(safe=False, throttle=10).scrape("http://www.google.com")
+    
+    scraper = AnonScraper(safe=False, throttle=10)
+
+    print scraper.scrape("http://www.google.com")
+    print scraper.scrape("http://www.yahoo.com")
