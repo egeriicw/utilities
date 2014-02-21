@@ -1,2 +1,2 @@
 # utilities initialization file
-from .AnonScraper import AnonScraper
+from AnonScraper.AnonScraper import AnonScraper
